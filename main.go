@@ -1,6 +1,9 @@
 package main
 
-import("fmt")
+import(
+	"fmt"
+"github.com/DidahDx/webservice/models"
+)
 
 
 func main(){
@@ -12,5 +15,5 @@ u:=models.User{
    }
 
 	fmt.Println("Hello",u)
-	
+
 }

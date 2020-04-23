@@ -8,5 +8,5 @@ type User struct{
 
 var(
 	users []*User
-	nextID=1
+	nextID =1
 )
