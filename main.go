@@ -1,19 +1,14 @@
 package main
 
 import(
-	"fmt"
-"github.com/DidahDx/webservice/models"
+"net/http"
+"github.com/DidahDx/webservice/controllers"
 )
 
 
 func main(){
 
-u:=models.User{
-	ID:2,
-	FirstName:"John",
-	SecondName:"Test",
-   }
-
-	fmt.Println("Hello",u)
+controllers.RegisterControllers()
+http.ListenAndServe(":3000",nil)
 
 }
