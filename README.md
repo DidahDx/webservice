@@ -26,3 +26,4 @@
 ### DELETE USER
 - used to delete a user with a specific id `http://localhost:3000/users/<id>`  example `http://localhost:3000/users/1`
 
+[Check out the API here](https://api-service-go.herokuapp.com/)
