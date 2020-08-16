@@ -1,14 +1,19 @@
 package main
 
-import(
-"net/http"
-"github.com/DidahDx/webservice/controllers"
+import (
+	"net/http"
+	"os"
+
+	"github.com/DidahDx/webservice/controllers"
 )
 
+func main() {
 
-func main(){
-
-controllers.RegisterControllers()
-http.ListenAndServe("PORT",nil)
+	controllers.RegisterControllers()
+	port := os.Getenv("PORT")
+	if port == "" {
+		port = "3000"
+	}
+	http.ListenAndServe(":"+port, nil)
 
 }
